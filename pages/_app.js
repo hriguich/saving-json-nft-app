@@ -1,6 +1,5 @@
 import './global.css';
 import '@rainbow-me/rainbowkit/styles.css';
-import type { AppProps } from 'next/app';
 import {
   RainbowKitProvider,
   getDefaultWallets,
@@ -50,7 +49,7 @@ const wagmiClient = createClient({
   webSocketProvider,
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
